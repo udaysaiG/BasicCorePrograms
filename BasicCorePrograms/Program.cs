@@ -4,19 +4,21 @@ class QuotientAndRemainder
 {
     static void Main()
     {
-        int dividend, divisor, quotient, remainder;
+        int a, b, temp;
 
-        Console.Write("Enter dividend: ");
-        dividend = int.Parse(Console.ReadLine());
+        Console.Write("Enter the first number: ");
+        a = int.Parse(Console.ReadLine());
 
-        Console.Write("Enter divisor: ");
-        divisor = int.Parse(Console.ReadLine());
+        Console.Write("Enter the second number: ");
+        b = int.Parse(Console.ReadLine());
 
-        quotient = dividend / divisor;
-        remainder = dividend % divisor;
+        Console.WriteLine("Before swapping: a = " + a + ", b = " + b);
 
-        Console.WriteLine("Quotient = {0}", quotient);
-        Console.WriteLine("Remainder = {0}", remainder);
+        temp = a;
+        a = b;
+        b = temp;
+
+        Console.WriteLine("After swapping: a = " + a + ", b = " + b);
     }
 }
 
