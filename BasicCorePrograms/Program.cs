@@ -4,19 +4,24 @@ class QuotientAndRemainder
 {
     static void Main(string[] args)
     {
-        char ch;
+        int num1, num2, num3;
 
-        Console.WriteLine("Enter an alphabet: ");
-        ch = Console.ReadLine()[0];
+        Console.WriteLine("Enter three numbers: ");
+        num1 = Convert.ToInt32(Console.ReadLine());
+        num2 = Convert.ToInt32(Console.ReadLine());
+        num3 = Convert.ToInt32(Console.ReadLine());
 
-        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u'
-            || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U')
+        if (num1 > num2 && num1 > num3)
         {
-            Console.WriteLine("{0} is a vowel", ch);
+            Console.WriteLine("{0} is the largest number", num1);
+        }
+        else if (num2 > num1 && num2 > num3)
+        {
+            Console.WriteLine("{0} is the largest number", num2);
         }
         else
         {
-            Console.WriteLine("{0} is a consonant", ch);
+            Console.WriteLine("{0} is the largest number", num3);
         }
     }
 }
