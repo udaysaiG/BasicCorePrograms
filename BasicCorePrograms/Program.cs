@@ -2,17 +2,21 @@
 
 class QuotientAndRemainder
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        int num = 5;
+        char ch;
 
-        if (num % 2 == 0)
+        Console.WriteLine("Enter an alphabet: ");
+        ch = Console.ReadLine()[0];
+
+        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u'
+            || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U')
         {
-            Console.WriteLine(num + " is even");
+            Console.WriteLine("{0} is a vowel", ch);
         }
         else
         {
-            Console.WriteLine(num + " is odd");
+            Console.WriteLine("{0} is a consonant", ch);
         }
     }
 }
