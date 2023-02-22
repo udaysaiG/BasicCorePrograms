@@ -4,24 +4,18 @@ class QuotientAndRemainder
 {
     static void Main()
     {
-        int a, b, temp;
+        int num = 5;
 
-        Console.Write("Enter the first number: ");
-        a = int.Parse(Console.ReadLine());
-
-        Console.Write("Enter the second number: ");
-        b = int.Parse(Console.ReadLine());
-
-        Console.WriteLine("Before swapping: a = " + a + ", b = " + b);
-
-        temp = a;
-        a = b;
-        b = temp;
-
-        Console.WriteLine("After swapping: a = " + a + ", b = " + b);
+        if (num % 2 == 0)
+        {
+            Console.WriteLine(num + " is even");
+        }
+        else
+        {
+            Console.WriteLine(num + " is odd");
+        }
     }
 }
-
 
 
 
