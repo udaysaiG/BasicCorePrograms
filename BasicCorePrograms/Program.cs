@@ -1,33 +1,27 @@
 ﻿using System;
 
-class Program
+class QuotientAndRemainder
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        if (args.Length == 0)
-        {
-            Console.WriteLine("Please provide a number as a command-line argument.");
-            return;
-        }
+        int dividend, divisor, quotient, remainder;
 
-        int n = int.Parse(args[0]);
+        Console.Write("Enter dividend: ");
+        dividend = int.Parse(Console.ReadLine());
 
-        Console.WriteLine("Prime factors of " + n + ":");
-        for (int i = 2; i * i <= n; i++)
-        {
-            while (n % i == 0)
-            {
-                Console.WriteLine(i);
-                n /= i;
-            }
-        }
+        Console.Write("Enter divisor: ");
+        divisor = int.Parse(Console.ReadLine());
 
-        if (n > 1)
-        {
-            Console.WriteLine(n);
-        }
+        quotient = dividend / divisor;
+        remainder = dividend % divisor;
+
+        Console.WriteLine("Quotient = {0}", quotient);
+        Console.WriteLine("Remainder = {0}", remainder);
     }
 }
+
+
+
 
 
 
