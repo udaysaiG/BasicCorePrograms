@@ -12,24 +12,24 @@
 
             int n = int.Parse(args[0]);
 
-            if (n < 0 || n >= 31)
+            if (n == 0)
             {
-                Console.WriteLine("N should be between 0 and 30 inclusive, since 2^31 overflows an int.");
+                Console.WriteLine("N should not be 0.");
                 return;
             }
 
-            int powerOfTwo = 1;
+            double harmonicNumber = 0;
 
-            Console.WriteLine("Powers of 2 less than or equal to 2^" + n + ":");
-            Console.WriteLine(powerOfTwo);
-
-            for (int i = 1; i <= 30; i++)
+            for (int i = 1; i <= n; i++)
             {
-                powerOfTwo *= 2;
-                Console.WriteLine(powerOfTwo);
+                harmonicNumber += 1.0 / i;
             }
+
+            Console.WriteLine("The " + n + "th harmonic number is: " + harmonicNumber);
         }
     }
-}
+        }
+    
+
         
     
